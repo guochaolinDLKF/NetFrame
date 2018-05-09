@@ -1,0 +1,4 @@
+C:\Users\sei.zz\Documents\Visual Studio 2010\Projects\SpeedNetFrame\NetFrame\bin\Debug\NetFrame.dll
+C:\Users\sei.zz\Documents\Visual Studio 2010\Projects\SpeedNetFrame\NetFrame\bin\Debug\NetFrame.pdb
+C:\Users\sei.zz\Documents\Visual Studio 2010\Projects\SpeedNetFrame\NetFrame\obj\Debug\NetFrame.dll
+C:\Users\sei.zz\Documents\Visual Studio 2010\Projects\SpeedNetFrame\NetFrame\obj\Debug\NetFrame.pdb
