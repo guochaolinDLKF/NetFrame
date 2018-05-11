@@ -12,19 +12,19 @@ namespace NetFrame.Net.TCP.Sock.IOCP
     {
         Stack<AsyncUserToken> m_pool;
 
-        // Initializes the object pool to the specified size
+        // 将对象池初始化为指定的大小
         //
-        // The "capacity" parameter is the maximum number of 
-        // AsyncUserToken objects the pool can hold
+        //“容量”参数是最大数量
+        //池可以容纳的AsyncUserToken对象
         public AsyncUserTokenPool(int capacity)
         {
             m_pool = new Stack<AsyncUserToken>(capacity);
         }
 
-        // Add a SocketAsyncEventArg instance to the pool
+        //将一个SocketAsyncEventArg实例添加到池中
         //
-        //The "item" parameter is the AsyncUserToken instance 
-        // to add to the pool
+        //“item”参数是AsyncUserToken实例
+        //添加到池中
         public void Push(AsyncUserToken item)
         {
             if (item == null) { throw new ArgumentNullException("Items added to a SocketAsyncEventArgsPool cannot be null"); }
@@ -34,8 +34,8 @@ namespace NetFrame.Net.TCP.Sock.IOCP
             }
         }
 
-        // Removes a AsyncUserToken instance from the pool
-        // and returns the object removed from the pool
+        //从池中移除一个AsyncUserToken实例
+        //并返回从池中移除的对象
         public AsyncUserToken Pop()
         {
             lock (m_pool)
@@ -44,7 +44,7 @@ namespace NetFrame.Net.TCP.Sock.IOCP
             }
         }
 
-        // The number of AsyncUserToken instances in the pool
+        //池中AsyncUserToken实例的数量
         public int Count
         {
             get { return m_pool.Count; }
